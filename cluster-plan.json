@@ -1,0 +1,89 @@
+{
+  "version": "1.9.0",
+  "seed_keyword": "how to choose a transportation provider in Massachusetts",
+  "created_at": "2026-09-26T21:45:00Z",
+  "data_source": "WebSearch fallback with qualitative SERP-overlap bands; no paid volume data",
+  "pillar": {
+    "id": "pillar",
+    "title": "How to Find a Transportation Provider in Massachusetts",
+    "keyword": "how to choose a transportation provider in Massachusetts",
+    "secondary_keywords": ["find limousine service Massachusetts", "compare car service providers", "Massachusetts transportation referral"],
+    "volume": null,
+    "template": "ultimate-guide",
+    "wordCount": 3000,
+    "url": "/guides/choosing-a-transportation-provider-massachusetts",
+    "status": "planned"
+  },
+  "clusters": [
+    {
+      "name": "Provider selection and referrals",
+      "color": "#2458ff",
+      "posts": [
+        {"id":"provider-referrals","title":"How Transportation Referrals Work in Massachusetts","keyword":"transportation referral service Massachusetts","secondary_keywords":["limousine referral service","how transportation referrals work"],"volume":null,"template":"explainer","wordCount":1500,"url":"/guides/how-transportation-referrals-work","status":"planned","conversionPage":"/about"},
+        {"id":"provider-questions","title":"Questions to Ask Before Choosing a Limousine or Car Service","keyword":"questions to ask a car service provider","secondary_keywords":["how to choose a limousine service Massachusetts","what to ask before booking a limo","verify limousine company Massachusetts"],"volume":null,"template":"listicle","wordCount":1600,"url":"/guides/questions-to-ask-transportation-provider","status":"planned","conversionPage":"/services"},
+        {"id":"provider-comparison","title":"Transportation Referral Service vs Direct Operator","keyword":"transportation referral vs direct operator","secondary_keywords":["referral service vs limo company","transportation intermediary"],"volume":null,"template":"comparison","wordCount":1400,"url":"/guides/referral-service-vs-direct-operator","status":"planned","conversionPage":"/about"}
+      ]
+    },
+    {
+      "name": "Boston Logan Airport planning",
+      "color": "#0f9d78",
+      "posts": [
+        {"id":"logan-checklist","title":"Logan Airport Car Service Request Checklist","keyword":"Logan Airport car service checklist","secondary_keywords":["information needed for Logan pickup","how to arrange Logan Airport car service","flight information for airport car service"],"volume":null,"template":"listicle","wordCount":1500,"url":"/guides/logan-airport-car-service-checklist","status":"planned","conversionPage":"/services/boston-logan-airport-car-service"},
+        {"id":"logan-pickup","title":"Meet-and-Greet vs Curbside Pickup at Logan Airport","keyword":"Logan meet and greet vs curbside pickup","secondary_keywords":["Logan terminal pickup questions","Boston airport pickup options"],"volume":null,"template":"comparison","wordCount":1500,"url":"/guides/logan-meet-and-greet-vs-curbside","status":"planned","conversionPage":"/services/boston-logan-airport-car-service"},
+        {"id":"logan-vehicle","title":"Sedan or SUV for a Logan Airport Trip?","keyword":"sedan vs SUV for Logan Airport","secondary_keywords":["airport car service luggage capacity","car service to Logan for groups"],"volume":null,"template":"comparison","wordCount":1400,"url":"/guides/sedan-vs-suv-logan-airport","status":"planned","conversionPage":"/services/luxury-suv-group-transportation"}
+      ]
+    },
+    {
+      "name": "Wedding and group planning",
+      "color": "#c26a3d",
+      "posts": [
+        {"id":"wedding-checklist","title":"Boston Wedding Transportation Planning Checklist","keyword":"Boston wedding transportation checklist","secondary_keywords":["questions to ask wedding limo provider","wedding guest transportation Boston"],"volume":null,"template":"listicle","wordCount":1700,"url":"/guides/boston-wedding-transportation-checklist","status":"planned","conversionPage":"/services/wedding-limousine-referrals"},
+        {"id":"wedding-timeline","title":"How to Build a Wedding Transportation Timeline","keyword":"wedding transportation timeline Massachusetts","secondary_keywords":["Cape Cod wedding transportation planning","transportation for out-of-town wedding guests"],"volume":null,"template":"how-to","wordCount":1600,"url":"/guides/wedding-transportation-timeline","status":"planned","conversionPage":"/services/wedding-limousine-referrals"},
+        {"id":"group-vehicle","title":"SUV, Sprinter, or Multiple Vehicles for Group Travel?","keyword":"SUV vs Sprinter for group transportation","secondary_keywords":["group transportation planning checklist","how many vehicles for group transportation","group transportation luggage planning"],"volume":null,"template":"comparison","wordCount":1700,"url":"/guides/suv-vs-sprinter-group-transportation","status":"planned","conversionPage":"/services/luxury-suv-group-transportation"}
+      ]
+    },
+    {
+      "name": "Corporate and hourly planning",
+      "color": "#8d67d5",
+      "posts": [
+        {"id":"corporate-checklist","title":"Corporate Transportation Provider Checklist for Boston Trips","keyword":"corporate transportation provider checklist Boston","secondary_keywords":["how to choose corporate transportation provider Boston","questions for corporate car service"],"volume":null,"template":"listicle","wordCount":1700,"url":"/guides/corporate-transportation-provider-checklist","status":"planned","conversionPage":"/services/corporate-transportation"},
+        {"id":"hourly-comparison","title":"Hourly Chauffeur Service vs Point-to-Point Transportation","keyword":"hourly chauffeur vs point-to-point","secondary_keywords":["when to book hourly car service Boston","multi-stop transportation planning"],"volume":null,"template":"comparison","wordCount":1500,"url":"/guides/hourly-vs-point-to-point-transportation","status":"planned","conversionPage":"/services/hourly-chauffeur-service"},
+        {"id":"executive-checklist","title":"Executive Assistant’s Ground Transportation Planning Checklist","keyword":"executive transportation planning checklist","secondary_keywords":["executive airport transportation checklist","transportation plan for business visitors"],"volume":null,"template":"listicle","wordCount":1600,"url":"/guides/executive-assistant-transportation-checklist","status":"planned","conversionPage":"/services/corporate-transportation"}
+      ]
+    }
+  ],
+  "links": [
+    {"from":"pillar","to":"provider-referrals","type":"mandatory","anchor":"how transportation referrals work"},{"from":"provider-referrals","to":"pillar","type":"mandatory","anchor":"choosing a Massachusetts transportation provider"},
+    {"from":"pillar","to":"provider-questions","type":"mandatory","anchor":"questions to ask a transportation provider"},{"from":"provider-questions","to":"pillar","type":"mandatory","anchor":"Massachusetts transportation provider guide"},
+    {"from":"pillar","to":"provider-comparison","type":"mandatory","anchor":"referral service versus direct operator"},{"from":"provider-comparison","to":"pillar","type":"mandatory","anchor":"how to find a transportation provider"},
+    {"from":"pillar","to":"logan-checklist","type":"mandatory","anchor":"Logan Airport car service checklist"},{"from":"logan-checklist","to":"pillar","type":"mandatory","anchor":"evaluate a transportation provider"},
+    {"from":"pillar","to":"logan-pickup","type":"mandatory","anchor":"Logan pickup options"},{"from":"logan-pickup","to":"pillar","type":"mandatory","anchor":"choosing an airport transportation provider"},
+    {"from":"pillar","to":"logan-vehicle","type":"mandatory","anchor":"sedan or SUV for Logan Airport"},{"from":"logan-vehicle","to":"pillar","type":"mandatory","anchor":"Massachusetts provider selection guide"},
+    {"from":"pillar","to":"wedding-checklist","type":"mandatory","anchor":"Boston wedding transportation checklist"},{"from":"wedding-checklist","to":"pillar","type":"mandatory","anchor":"find a Massachusetts transportation provider"},
+    {"from":"pillar","to":"wedding-timeline","type":"mandatory","anchor":"wedding transportation timeline"},{"from":"wedding-timeline","to":"pillar","type":"mandatory","anchor":"transportation provider evaluation guide"},
+    {"from":"pillar","to":"group-vehicle","type":"mandatory","anchor":"group transportation vehicle planning"},{"from":"group-vehicle","to":"pillar","type":"mandatory","anchor":"choose a transportation provider"},
+    {"from":"pillar","to":"corporate-checklist","type":"mandatory","anchor":"corporate transportation provider checklist"},{"from":"corporate-checklist","to":"pillar","type":"mandatory","anchor":"Massachusetts transportation provider guide"},
+    {"from":"pillar","to":"hourly-comparison","type":"mandatory","anchor":"hourly versus point-to-point transportation"},{"from":"hourly-comparison","to":"pillar","type":"mandatory","anchor":"evaluate a transportation provider"},
+    {"from":"pillar","to":"executive-checklist","type":"mandatory","anchor":"executive transportation planning checklist"},{"from":"executive-checklist","to":"pillar","type":"mandatory","anchor":"choosing a transportation provider"},
+
+    {"from":"provider-referrals","to":"provider-questions","type":"sibling","anchor":"questions to ask a provider"},{"from":"provider-questions","to":"provider-referrals","type":"sibling","anchor":"how referrals work"},{"from":"provider-referrals","to":"provider-comparison","type":"sibling","anchor":"referral service and direct operator differences"},{"from":"provider-comparison","to":"provider-referrals","type":"sibling","anchor":"transportation referral process"},{"from":"provider-questions","to":"provider-comparison","type":"sibling","anchor":"who provides the transportation"},{"from":"provider-comparison","to":"provider-questions","type":"sibling","anchor":"provider evaluation questions"},
+    {"from":"logan-checklist","to":"logan-pickup","type":"sibling","anchor":"Logan pickup options"},{"from":"logan-pickup","to":"logan-checklist","type":"sibling","anchor":"Logan trip information checklist"},{"from":"logan-checklist","to":"logan-vehicle","type":"sibling","anchor":"airport vehicle and luggage planning"},{"from":"logan-vehicle","to":"logan-checklist","type":"sibling","anchor":"Logan Airport request checklist"},{"from":"logan-pickup","to":"logan-vehicle","type":"sibling","anchor":"choose a vehicle for airport pickup"},{"from":"logan-vehicle","to":"logan-pickup","type":"sibling","anchor":"curbside and meet-and-greet pickup"},
+    {"from":"wedding-checklist","to":"wedding-timeline","type":"sibling","anchor":"build a wedding transportation timeline"},{"from":"wedding-timeline","to":"wedding-checklist","type":"sibling","anchor":"wedding transportation checklist"},{"from":"wedding-checklist","to":"group-vehicle","type":"sibling","anchor":"vehicle planning for wedding groups"},{"from":"group-vehicle","to":"wedding-checklist","type":"sibling","anchor":"wedding group transportation planning"},{"from":"wedding-timeline","to":"group-vehicle","type":"sibling","anchor":"group vehicle coordination"},{"from":"group-vehicle","to":"wedding-timeline","type":"sibling","anchor":"coordinate group transportation timing"},
+    {"from":"corporate-checklist","to":"hourly-comparison","type":"sibling","anchor":"hourly or point-to-point service"},{"from":"hourly-comparison","to":"corporate-checklist","type":"sibling","anchor":"corporate provider checklist"},{"from":"corporate-checklist","to":"executive-checklist","type":"sibling","anchor":"executive transportation planning"},{"from":"executive-checklist","to":"corporate-checklist","type":"sibling","anchor":"questions for a corporate provider"},{"from":"hourly-comparison","to":"executive-checklist","type":"sibling","anchor":"multi-stop executive itinerary planning"},{"from":"executive-checklist","to":"hourly-comparison","type":"sibling","anchor":"hourly versus point-to-point options"},
+
+    {"from":"wedding-checklist","to":"provider-questions","type":"cross-cluster","anchor":"questions to ask a transportation provider"},{"from":"executive-checklist","to":"logan-checklist","type":"cross-cluster","anchor":"Logan Airport request details"},{"from":"logan-vehicle","to":"group-vehicle","type":"cross-cluster","anchor":"vehicle planning for larger groups"},{"from":"hourly-comparison","to":"provider-comparison","type":"cross-cluster","anchor":"provider responsibilities and referral role"}
+  ],
+  "serp_matrix": {
+    "status": "qualitative-only",
+    "reason": "WebSearch fallback did not expose stable query-labeled top-ten URL sets; exact overlap scores were not fabricated.",
+    "bands": [
+      {"keywords":["information needed for Logan pickup","Logan Airport car service checklist"],"relationship":"same post"},
+      {"keywords":["questions for corporate car service","corporate transportation provider checklist Boston"],"relationship":"same post"},
+      {"keywords":["Boston wedding transportation checklist","wedding transportation timeline Massachusetts"],"relationship":"same cluster"},
+      {"keywords":["hourly chauffeur vs point-to-point","when to book hourly car service Boston"],"relationship":"same cluster"},
+      {"keywords":["Boston Logan airport car service","Boston wedding transportation"],"relationship":"separate commercial intents"}
+    ]
+  },
+  "meta": {"totalPosts":13,"totalClusters":4,"totalLinks":52,"estimatedWords":21600},
+  "scorecard": {"coverage":0,"linkDensity":4,"orphanPages":0,"cannibalization":0,"contentGaps":13}
+}

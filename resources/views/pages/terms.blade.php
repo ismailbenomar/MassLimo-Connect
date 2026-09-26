@@ -1,0 +1,2 @@
+@extends('layouts.app')
+@section('content')<section class="form-hero shell"><p class="eyebrow">Terms and referral disclosure</p><h1>A clear relationship from the start.</h1></section><section class="section shell prose"><p>MassLimo Connect is an independent marketing and referral service. Transportation services, pricing, reservations and payments are provided directly by independent third-party transportation operators. We do not guarantee availability, pricing, licensing, insurance or the outcome of a transportation arrangement.</p></section>@endsection

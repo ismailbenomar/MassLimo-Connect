@@ -1,0 +1,2 @@
+@extends('layouts.app')
+@section('content')<section class="form-hero shell"><p class="eyebrow">Contact</p><h1>Start with the quickest route.</h1><p class="lede">For a transportation request, call now or request a callback and share your trip details.</p><div class="actions"><x-call-button location="contact" :show-number="true" /><a class="button button-outline" href="{{ route('leads.create') }}">Request a callback</a></div></section>@endsection

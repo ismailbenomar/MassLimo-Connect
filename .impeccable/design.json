@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-26T20:54:37Z",
+  "title": "Design System: MassLimo Connect",
+  "extensions": {
+    "colorMeta": {
+      "signal-cobalt": {
+        "role": "primary",
+        "displayName": "Signal Cobalt",
+        "canonical": "#2458ff",
+        "tonalRamp": ["oklch(21% 0.12 264)", "oklch(31% 0.17 264)", "oklch(43% 0.22 264)", "#2458ff", "oklch(67% 0.16 264)", "#a9beff", "oklch(87% 0.06 264)", "oklch(95% 0.025 264)"]
+      },
+      "operational-ink": {
+        "role": "neutral",
+        "displayName": "Operational Ink",
+        "canonical": "#101114",
+        "tonalRamp": ["#101114", "oklch(25% 0.008 265)", "oklch(36% 0.008 265)", "oklch(48% 0.007 265)", "oklch(61% 0.006 265)", "oklch(73% 0.005 265)", "oklch(85% 0.004 265)", "oklch(95% 0.003 265)"]
+      },
+      "warm-paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#f4f4ef",
+        "tonalRamp": ["oklch(15% 0.008 100)", "oklch(27% 0.01 100)", "oklch(40% 0.012 100)", "oklch(53% 0.014 100)", "oklch(66% 0.016 100)", "oklch(78% 0.018 100)", "oklch(89% 0.02 100)", "#f4f4ef"]
+      },
+      "header-paper": {
+        "role": "neutral",
+        "displayName": "Header Paper",
+        "canonical": "#f8f8f4",
+        "tonalRamp": ["oklch(15% 0.006 100)", "oklch(27% 0.008 100)", "oklch(40% 0.01 100)", "oklch(53% 0.012 100)", "oklch(66% 0.014 100)", "oklch(79% 0.016 100)", "oklch(90% 0.018 100)", "#f8f8f4"]
+      },
+      "structural-line": {
+        "role": "neutral",
+        "displayName": "Structural Line",
+        "canonical": "#d7d8d1",
+        "tonalRamp": ["oklch(15% 0.008 105)", "oklch(27% 0.009 105)", "oklch(40% 0.01 105)", "oklch(53% 0.011 105)", "oklch(66% 0.012 105)", "oklch(78% 0.013 105)", "#d7d8d1", "oklch(95% 0.008 105)"]
+      },
+      "body-gray": {
+        "role": "neutral",
+        "displayName": "Body Gray",
+        "canonical": "#55575d",
+        "tonalRamp": ["oklch(15% 0.01 260)", "oklch(27% 0.012 260)", "#55575d", "oklch(50% 0.012 260)", "oklch(62% 0.01 260)", "oklch(74% 0.008 260)", "oklch(86% 0.006 260)", "oklch(95% 0.004 260)"]
+      },
+      "inverse-body": {
+        "role": "neutral",
+        "displayName": "Inverse Body",
+        "canonical": "#b8bac1",
+        "tonalRamp": ["oklch(15% 0.012 260)", "oklch(27% 0.014 260)", "oklch(40% 0.016 260)", "oklch(53% 0.018 260)", "oklch(66% 0.02 260)", "#b8bac1", "oklch(86% 0.012 260)", "oklch(95% 0.006 260)"]
+      },
+      "cobalt-tint": {
+        "role": "primary",
+        "displayName": "Cobalt Tint",
+        "canonical": "#a9beff",
+        "tonalRamp": ["oklch(15% 0.07 264)", "oklch(27% 0.1 264)", "oklch(40% 0.12 264)", "oklch(53% 0.13 264)", "oklch(66% 0.12 264)", "#a9beff", "oklch(88% 0.06 264)", "oklch(95% 0.025 264)"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(40% 0 0)", "oklch(53% 0 0)", "oklch(66% 0 0)", "oklch(78% 0 0)", "oklch(90% 0 0)", "#ffffff"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Cinematic hero and closing statements." },
+      "headline": { "displayName": "Headline", "purpose": "Major editorial section propositions." },
+      "title": { "displayName": "Title", "purpose": "Service choices and process steps." },
+      "body": { "displayName": "Body", "purpose": "Explanatory and supporting copy." },
+      "label": { "displayName": "Label", "purpose": "Categories, route codes, and compact navigation signals." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "directional-hover", "value": "transform 0.2s ease", "purpose": "Moves directional arrows 4px diagonally on hover." },
+      { "name": "reduced-motion", "value": "0.01ms", "purpose": "Collapses animation and transition duration when reduced motion is requested." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "800px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The cobalt action used for the primary call, service-area action, and strongest conversion path.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Call (762) 436-4050 <svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M7 17 17 7M8 7h9v9\" /></svg></a>",
+      "css": ".ds-btn-primary { align-items: center; background: #2458ff; border: 1px solid transparent; border-radius: 0; color: #fff; display: inline-flex; font: 600 .85rem/1.2 'Instrument Sans', sans-serif; gap: .8rem; justify-content: center; min-height: 52px; padding: 1rem 1.35rem; text-decoration: none; transition: filter .2s ease; } .ds-btn-primary svg { fill: none; height: 1.1em; stroke: currentColor; stroke-linecap: square; stroke-linejoin: miter; stroke-width: 1.8; width: 1.1em; } .ds-btn-primary:hover { filter: brightness(.92); } .ds-btn-primary:focus-visible { outline: 2px solid #2458ff; outline-offset: 5px; } .ds-btn-primary:active { filter: brightness(.84); }"
+    },
+    {
+      "name": "Light Button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "The secondary action used over photography and dark fields.",
+      "html": "<a class=\"ds-btn-light\" href=\"#\">Request a callback <svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M7 17 17 7M8 7h9v9\" /></svg></a>",
+      "css": ".ds-btn-light { align-items: center; background: #fff; border: 1px solid transparent; border-radius: 0; color: #101114; display: inline-flex; font: 600 .85rem/1.2 'Instrument Sans', sans-serif; gap: .8rem; justify-content: center; min-height: 52px; padding: 1rem 1.35rem; text-decoration: none; transition: background .2s ease; } .ds-btn-light svg { fill: none; height: 1.1em; stroke: currentColor; stroke-linecap: square; stroke-linejoin: miter; stroke-width: 1.8; width: 1.1em; } .ds-btn-light:hover { background: #f4f4ef; } .ds-btn-light:focus-visible { outline: 2px solid #2458ff; outline-offset: 5px; } .ds-btn-light:active { background: #d7d8d1; }"
+    },
+    {
+      "name": "Global Navigation",
+      "kind": "nav",
+      "description": "The light global header with square identity mark, compact links, and dark call action.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\"><span>MC</span>MassLimo <b>Connect</b></a><div><a href=\"#\">Services</a><a href=\"#\">Service areas</a><a href=\"#\">About</a></div><a class=\"ds-nav-call\" href=\"#\">Call now</a></nav>",
+      "css": ".ds-nav { align-items: center; background: #f8f8f4; color: #101114; display: flex; font-family: 'Instrument Sans', sans-serif; gap: 2rem; justify-content: space-between; padding: 1.15rem 2rem; } .ds-nav a { color: inherit; text-decoration: none; } .ds-brand { align-items: center; display: inline-flex; font-size: 1.05rem; font-weight: 500; gap: .85rem; white-space: nowrap; } .ds-brand span { align-items: center; background: #101114; color: #fff; display: inline-flex; font-size: .75rem; font-weight: 600; height: 2.6rem; justify-content: center; width: 2.6rem; } .ds-brand b { color: #2458ff; font-weight: 500; } .ds-nav > div { display: flex; gap: 1.6rem; margin-left: auto; } .ds-nav > div a { color: #37383d; font-size: .82rem; font-weight: 500; } .ds-nav > div a:hover { color: #2458ff; } .ds-nav a:focus-visible { outline: 2px solid #2458ff; outline-offset: 5px; } .ds-nav-call { background: #101114; color: #fff !important; font-size: .78rem; font-weight: 700; min-height: 48px; padding: .85rem 1.2rem; } .ds-nav-call:hover { background: #2458ff; }"
+    },
+    {
+      "name": "Service Choice",
+      "kind": "card",
+      "refersTo": "service-link",
+      "description": "A ruled editorial service link with category signal and moving northeast arrow.",
+      "html": "<a class=\"ds-service\" href=\"#\"><span>Airport</span><h3>Boston Logan transfers</h3><p>Discuss pickup timing, luggage and your route with a provider.</p><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M7 17 17 7M8 7h9v9\" /></svg></a>",
+      "css": ".ds-service { background: #f4f4ef; border-bottom: 1px solid #d7d8d1; color: #101114; display: block; font-family: 'Instrument Sans', sans-serif; min-height: 260px; padding: 2rem 5rem 2.2rem 0; position: relative; text-decoration: none; } .ds-service > span { color: #2458ff; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; } .ds-service h3 { font-size: clamp(1.8rem, 2.6vw, 2.8rem); font-weight: 500; letter-spacing: -.035em; line-height: 1.08; margin: 3rem 0 .8rem; } .ds-service p { color: #55575d; font-size: .95rem; line-height: 1.55; margin: 0; max-width: 430px; } .ds-service svg { color: #2458ff; fill: none; height: 1.8rem; position: absolute; right: 1rem; stroke: currentColor; stroke-width: 1.6; top: 1.7rem; transition: transform .2s ease; width: 1.8rem; } .ds-service:hover svg { transform: translate(4px, -4px); } .ds-service:focus-visible { outline: 2px solid #2458ff; outline-offset: 5px; } .ds-service:active { background: #e9e9e3; }"
+    },
+    {
+      "name": "Route Board Row",
+      "kind": "custom",
+      "description": "A departure-board-inspired regional row for service coverage.",
+      "html": "<a class=\"ds-route\" href=\"#\"><span>BOS</span><strong>Boston</strong><small>City + airport</small></a>",
+      "css": ".ds-route { align-items: center; background: #f4f4ef; border-bottom: 1px solid #bfc0bb; color: #101114; display: grid; font-family: 'Instrument Sans', sans-serif; gap: 1rem; grid-template-columns: 4rem 1fr auto; min-height: 92px; text-decoration: none; } .ds-route span { color: #2458ff; font-size: .75rem; font-weight: 700; } .ds-route strong { font-size: 1.25rem; font-weight: 700; } .ds-route small { color: #696b70; } .ds-route:hover strong { color: #2458ff; } .ds-route:focus-visible { outline: 2px solid #2458ff; outline-offset: 5px; } .ds-route:active { background: #e9e9e3; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Massachusetts Departure Editorial",
+    "overview": "MassLimo Connect uses the visual language of contemporary airport wayfinding and mobility editorial: decisive route codes, crisp rules, large direct typography, and a single cobalt signal. It feels efficient and current while keeping the independent-referral model plain and legible.\n\nThe composition moves between warm paper editorial fields, near-black operational sections, and full-bleed transportation photography. Density is generous but disciplined. Large headlines establish confidence; compact labels, numbered steps, and regional codes turn details into navigational landmarks.",
+    "keyCharacteristics": [
+      "Cobalt wayfinding against warm paper and near-black fields",
+      "Instrument Sans at every level, with scale and weight creating hierarchy",
+      "Square controls, crisp rules, route codes, and directional arrows",
+      "Full-bleed automotive photography presented as illustrative",
+      "Flat editorial layering with high-contrast section changes"
+    ],
+    "rules": [
+      { "name": "The One Signal Rule", "body": "Cobalt is the only chromatic signal; do not add competing accent colors.", "section": "colors" },
+      { "name": "The Field Rule", "body": "Build sections as broad paper, ink, cobalt, or photographic fields and let their contrast establish hierarchy.", "section": "colors" },
+      { "name": "The Scale Carries Voice Rule", "body": "Keep one type family and create personality through scale, spacing, and placement.", "section": "typography" },
+      { "name": "The Label Means Something Rule", "body": "Uppercase microtype identifies categories, places, or sequence; it is not ornamental filler.", "section": "typography" },
+      { "name": "The Flat Editorial Rule", "body": "Separate content with tonal fields and rules; do not lift cards or actions with shadows.", "section": "elevation" },
+      { "name": "The Square Control Rule", "body": "Interactive controls use a zero radius; do not soften the system with pills or rounded cards.", "section": "shapes" }
+    ],
+    "dos": [
+      "**Do** reserve cobalt for calls to action, route codes, labels, and directional information.",
+      "**Do** alternate broad paper, ink, cobalt, and photographic fields to structure the story.",
+      "**Do** use crisp one-pixel rules and square geometry to organize dense choices.",
+      "**Do** keep vehicle imagery full-bleed and clearly presented as illustrative rather than owned-fleet evidence.",
+      "**Do** reduce multi-column layouts to clear single-column sequences at the 800px breakpoint."
+    ],
+    "donts": [
+      "**Don't** introduce black-and-gold luxury styling, ornamental serif typography, or limousine-brochure decoration.",
+      "**Don't** turn service choices into rounded, shadowed software cards.",
+      "**Don't** add secondary accent hues that compete with cobalt.",
+      "**Don't** use pills for buttons, navigation, filters, or labels.",
+      "**Don't** imply that MassLimo Connect owns the vehicles shown or directly provides transportation."
+    ]
+  }
+}

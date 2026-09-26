@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MassLimo Connect Topic Cluster Map</title>
+    <style>
+        :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #0d1117; color: #edf2f7; }
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 2rem; }
+        header { margin: 0 auto 2rem; max-width: 1200px; }
+        h1 { font-size: clamp(2rem, 5vw, 4rem); letter-spacing: -.05em; margin: 0 0 .8rem; }
+        header p { color: #9da8b6; line-height: 1.6; max-width: 760px; }
+        .summary { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.4rem; }
+        .summary span, button { background: #171d26; border: 1px solid #2c3542; border-radius: 999px; color: #dce5ef; padding: .65rem 1rem; }
+        .controls { display: flex; flex-wrap: wrap; gap: .6rem; margin: 0 auto 1.5rem; max-width: 1200px; }
+        button { cursor: pointer; font: inherit; }
+        button[aria-pressed="true"] { background: #2458ff; border-color: #2458ff; color: white; }
+        main { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: auto; max-width: 1200px; }
+        .pillar { background: linear-gradient(145deg, #1c2d65, #151c2a); border: 1px solid #4b70ff; grid-column: 1 / -1; }
+        article { background: #151b23; border: 1px solid #29313d; border-radius: 14px; padding: 1.4rem; }
+        article h2 { font-size: 1.25rem; margin: 0 0 .5rem; }
+        article > p { color: #9da8b6; font-size: .9rem; line-height: 1.55; }
+        .posts { display: grid; gap: .7rem; margin-top: 1rem; }
+        .post { background: #0f141b; border-left: 4px solid var(--cluster); border-radius: 7px; padding: 1rem; }
+        .post strong { display: block; line-height: 1.35; }
+        .post span { color: #9da8b6; display: block; font-size: .76rem; margin-top: .45rem; }
+        .intent { color: #a9beff !important; text-transform: capitalize; }
+        [hidden] { display: none !important; }
+        footer { color: #7f8997; font-size: .78rem; margin: 2rem auto 0; max-width: 1200px; }
+        @media (max-width: 760px) { body { padding: 1.2rem; } main { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Topic cluster map</h1>
+        <p>A referral-focused content architecture for Massachusetts transportation research. Commercial service pages remain separate conversion destinations.</p>
+        <div class="summary"><span>1 pillar</span><span>4 clusters</span><span>12 spokes</span><span>~21,600 planned words</span></div>
+    </header>
+    <div class="controls" aria-label="Filter by cluster">
+        <button type="button" data-filter="all" aria-pressed="true">All clusters</button>
+        <button type="button" data-filter="provider" aria-pressed="false">Provider selection</button>
+        <button type="button" data-filter="logan" aria-pressed="false">Logan Airport</button>
+        <button type="button" data-filter="wedding" aria-pressed="false">Wedding + group</button>
+        <button type="button" data-filter="corporate" aria-pressed="false">Corporate + hourly</button>
+    </div>
+    <main>
+        <article class="pillar">
+            <h2>How to Find a Transportation Provider in Massachusetts</h2>
+            <p>Pillar · `/guides/choosing-a-transportation-provider-massachusetts` · Links to every spoke and the existing services hub.</p>
+        </article>
+        <article data-cluster="provider" style="--cluster:#2458ff"><h2>Provider selection and referrals</h2><p>The brand-defining cluster: explain referrals, provider evaluation, and the direct-operator distinction.</p><div class="posts"><div class="post"><strong>How Transportation Referrals Work in Massachusetts</strong><span class="intent">Explainer · Priority 1</span></div><div class="post"><strong>Questions to Ask Before Choosing a Limousine or Car Service</strong><span class="intent">Checklist · Priority 2</span></div><div class="post"><strong>Transportation Referral Service vs Direct Operator</strong><span class="intent">Comparison · Priority 3</span></div></div></article>
+        <article data-cluster="logan" style="--cluster:#0f9d78"><h2>Boston Logan Airport planning</h2><p>Trip preparation, pickup models, luggage, passenger count, and vehicle questions.</p><div class="posts"><div class="post"><strong>Logan Airport Car Service Request Checklist</strong><span class="intent">Checklist · Priority 1</span></div><div class="post"><strong>Meet-and-Greet vs Curbside Pickup at Logan Airport</strong><span class="intent">Comparison · Priority 2</span></div><div class="post"><strong>Sedan or SUV for a Logan Airport Trip?</strong><span class="intent">Comparison · Priority 3</span></div></div></article>
+        <article data-cluster="wedding" style="--cluster:#c26a3d"><h2>Wedding and group planning</h2><p>Timelines, guest movement, group size, luggage, and vehicle coordination questions.</p><div class="posts"><div class="post"><strong>Boston Wedding Transportation Planning Checklist</strong><span class="intent">Checklist · Priority 1</span></div><div class="post"><strong>How to Build a Wedding Transportation Timeline</strong><span class="intent">How-to · Priority 2</span></div><div class="post"><strong>SUV, Sprinter, or Multiple Vehicles for Group Travel?</strong><span class="intent">Comparison · Priority 3</span></div></div></article>
+        <article data-cluster="corporate" style="--cluster:#8d67d5"><h2>Corporate and hourly planning</h2><p>Provider evaluation, itinerary structure, schedule flexibility, and executive coordination.</p><div class="posts"><div class="post"><strong>Corporate Transportation Provider Checklist for Boston Trips</strong><span class="intent">Checklist · Priority 1</span></div><div class="post"><strong>Hourly Chauffeur Service vs Point-to-Point Transportation</strong><span class="intent">Comparison · Priority 2</span></div><div class="post"><strong>Executive Assistant’s Ground Transportation Planning Checklist</strong><span class="intent">Checklist · Priority 3</span></div></div></article>
+    </main>
+    <footer>Planned content only. Search volume was not estimated without paid data. See cluster-plan.json for keywords and the full link matrix.</footer>
+    <script>
+        const buttons = document.querySelectorAll('[data-filter]');
+        const clusters = document.querySelectorAll('[data-cluster]');
+        buttons.forEach((button) => button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
+            buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+            clusters.forEach((cluster) => { cluster.hidden = filter !== 'all' && cluster.dataset.cluster !== filter; });
+        }));
+    </script>
+</body>
+</html>

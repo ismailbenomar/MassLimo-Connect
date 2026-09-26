@@ -1,0 +1,2 @@
+@extends('layouts.app')
+@section('content')<section class="form-hero shell"><p class="eyebrow">Privacy policy</p><h1>Your request stays focused on transportation contact.</h1></section><section class="section shell prose"><p>We use callback information to respond to the submitted transportation request and connect you with an independent provider. We do not sell your request as a general marketing list. Contact us to ask about your information.</p></section>@endsection
