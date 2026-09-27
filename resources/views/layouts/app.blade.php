@@ -4,9 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <x-seo />
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @if (Vite::isRunningHot())
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @else
+        <style>{!! Vite::content('resources/css/app.css') !!}</style>
+        @vite('resources/js/app.js')
+    @endif
 </head>
-<body class="bg-ink text-white antialiased {{ request()->routeIs('home') ? 'page-home' : '' }}">
+<body class="{{ request()->routeIs('home') ? 'page-home' : '' }}">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="announcement">Massachusetts transportation connections <span>— Call or request a callback</span></div>
     <header class="site-header">

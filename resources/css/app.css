@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source(none);
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -13,7 +13,7 @@
 
 :root { font-family: 'Instrument Sans', ui-sans-serif, sans-serif; color-scheme: dark; }
 * { box-sizing: border-box; }
-body { margin: 0; background: #111417; }
+body { margin: 0; background: #111417; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
 .announcement { background: #d8b36a; color: #111417; font-size: .72rem; font-weight: 700; letter-spacing: .12em; padding: .65rem 1rem; text-align: center; text-transform: uppercase; }
 .site-header { align-items: center; display: flex; gap: 2rem; justify-content: space-between; margin: auto; max-width: 1280px; padding: 1.5rem 2rem; }
@@ -211,7 +211,8 @@ body { background: var(--modern-ink); }
 .icon { fill: none; height: 1.1em; stroke: currentColor; stroke-linecap: square; stroke-linejoin: miter; stroke-width: 1.8; width: 1.1em; }
 .home-hero { background: var(--modern-ink); }
 .hero-visual { height: min(780px, calc(100svh - 105px)); min-height: 650px; overflow: hidden; position: relative; }
-.hero-visual > img { height: 100%; object-fit: cover; object-position: center 62%; width: 100%; }
+.hero-visual > picture { display: block; height: 100%; width: 100%; }
+.hero-visual > picture > img { height: 100%; object-fit: cover; object-position: center 62%; width: 100%; }
 .hero-shade { background: linear-gradient(90deg, rgba(8, 10, 14, .9) 0%, rgba(8, 10, 14, .62) 42%, rgba(8, 10, 14, .12) 76%); inset: 0; position: absolute; }
 .hero-content { bottom: 0; left: 50%; padding-bottom: 5rem; position: absolute; transform: translateX(-50%); width: 100%; }
 .hero-place { color: #fff; font-size: .8rem; font-weight: 600; letter-spacing: .08em; margin: 0 0 1.4rem; text-transform: uppercase; }
@@ -280,10 +281,10 @@ body { background: var(--modern-ink); }
     .mobile-menu summary { color: var(--modern-ink); }
     .mobile-menu nav { background: #f8f8f4; border-color: var(--modern-blue); color: var(--modern-ink); }
     .hero-visual { height: 720px; min-height: 0; }
-    .hero-visual > img { object-position: 61% 65%; }
+    .hero-visual > picture > img { object-position: 61% 65%; }
     .hero-shade { background: linear-gradient(0deg, rgba(8, 10, 14, .94) 0%, rgba(8, 10, 14, .35) 75%, rgba(8, 10, 14, .12)); }
     .hero-content { padding: 0 1.25rem 4.5rem; }
-    .hero-content h1 { font-size: clamp(3.5rem, 15vw, 5rem); }
+    .hero-content h1 { font-size: clamp(2.7rem, 11.5vw, 4rem); }
     .hero-intro { font-size: 1rem; }
     .hero-index { display: none; }
     .hero-credit { bottom: .8rem; font-size: .64rem; left: 1.25rem; right: auto; }

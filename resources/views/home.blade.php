@@ -5,7 +5,10 @@
 @section('content')
 <section class="home-hero">
     <div class="hero-visual">
-        <img src="{{ asset('images/executive-sedan.webp') }}" srcset="{{ asset('images/executive-sedan-small.webp') }} 700w, {{ asset('images/executive-sedan.webp') }} 1400w" sizes="100vw" width="1400" height="1750" fetchpriority="high" alt="Black executive sedan beside contemporary architecture">
+        <picture>
+            <source type="image/avif" srcset="{{ asset('images/executive-sedan-480.avif') }} 480w, {{ asset('images/executive-sedan-700.avif') }} 700w, {{ asset('images/executive-sedan-1100.avif') }} 1100w, {{ asset('images/executive-sedan-1400.avif') }} 1400w" sizes="100vw">
+            <img src="{{ asset('images/executive-sedan.webp') }}" srcset="{{ asset('images/executive-sedan-small.webp') }} 700w, {{ asset('images/executive-sedan.webp') }} 1400w" sizes="100vw" width="1400" height="1750" fetchpriority="high" alt="Black executive sedan beside contemporary architecture">
+        </picture>
         <div class="hero-shade"></div>
         <div class="hero-content shell">
             <h1>Massachusetts limo service referrals,<br><em>made easier.</em></h1>

@@ -57,6 +57,18 @@ class SeoMetadataTest extends TestCase
             ->assertDontSee('"@type":"LocalBusiness"', false);
     }
 
+    public function test_homepage_prioritizes_a_responsive_avif_hero_without_render_blocking_css(): void
+    {
+        $this->get(route('home'))
+            ->assertOk()
+            ->assertSee('<source type="image/avif"', false)
+            ->assertSee('executive-sedan-480.avif 480w', false)
+            ->assertSee('executive-sedan-1100.avif 1100w', false)
+            ->assertSee('fetchpriority="high"', false)
+            ->assertSee('<style>', false)
+            ->assertDontSee('rel="stylesheet"', false);
+    }
+
     public function test_indexable_inner_pages_include_visible_and_structured_breadcrumbs(): void
     {
         $this->get(route('services.logan'))
