@@ -20,7 +20,7 @@
             <a href="{{ route('services') }}">Services</a>
             <a href="{{ route('areas') }}">Service areas</a>
             <a href="{{ route('about') }}">About</a>
-            <a href="{{ route('leads.create') }}">Request a callback</a>
+            <a href="{{ route('reservations.create') }}">Reserve online</a>
         </nav>
         <x-call-button location="header" :show-number="true" />
         <details class="mobile-menu">
@@ -30,6 +30,7 @@
                 <a href="{{ route('areas') }}">Service areas</a>
                 <a href="{{ route('about') }}">About us</a>
                 <a href="{{ route('contact') }}">Contact</a>
+                <a href="{{ route('reservations.create') }}">Reserve online</a>
                 <a href="{{ route('leads.create') }}">Request a callback</a>
             </nav>
         </details>
@@ -38,7 +39,7 @@
     <main id="main-content">@yield('content')</main>
     <footer class="site-footer">
         <div><a class="brand" href="{{ route('home') }}"><span class="brand-mark">MC</span><span>MassLimo <b>Connect</b></span></a><p>Connecting Massachusetts travelers with independent transportation providers.</p></div>
-        <div><h2>Explore</h2><a href="{{ route('services') }}">Services</a><a href="{{ route('areas') }}">Massachusetts service areas</a><a href="{{ route('contact') }}">Contact</a></div>
+        <div><h2>Explore</h2><a href="{{ route('services') }}">Services</a><a href="{{ route('areas') }}">Massachusetts service areas</a><a href="{{ route('reservations.create') }}">Reserve online</a><a href="{{ route('contact') }}">Contact</a></div>
         <div><h2>Legal</h2><a href="{{ route('privacy') }}">Privacy policy</a><a href="{{ route('terms') }}">Terms and referral disclosure</a></div>
         <p class="disclosure">MassLimo Connect is an independent marketing and referral service. Transportation services, pricing, reservations and payments are provided directly by independent third-party transportation operators.</p>
     </footer>

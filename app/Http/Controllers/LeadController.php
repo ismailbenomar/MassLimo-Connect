@@ -20,6 +20,7 @@ class LeadController extends Controller
     {
         $lead = Lead::create([
             ...$request->safe()->except(['consent', 'website']),
+            'request_type' => 'callback',
             'source_page' => url()->previous(),
             'utm_source' => $request->string('utm_source')->toString() ?: null,
             'utm_medium' => $request->string('utm_medium')->toString() ?: null,

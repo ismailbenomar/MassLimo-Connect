@@ -31,7 +31,7 @@ class AdminLeadTest extends TestCase
         $this->actingAs($user)->patch(route('admin.leads.update', $lead), [
             'status' => 'contacted',
             'internal_notes' => 'Spoke with customer.',
-        ])->assertNoContent();
+        ])->assertRedirect(route('admin.leads.show', $lead));
 
         $this->assertDatabaseHas('leads', ['id' => $lead->id, 'status' => 'contacted']);
     }

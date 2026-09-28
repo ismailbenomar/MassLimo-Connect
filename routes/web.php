@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\LeadController as AdminLeadController;
+use App\Http\Controllers\Admin\TransportationSettingController;
 use App\Http\Controllers\LeadController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
@@ -11,6 +13,10 @@ Route::view('/', 'home')->name('home');
 Route::get('/request-a-callback', [LeadController::class, 'create'])->name('leads.create');
 Route::post('/request-a-callback', [LeadController::class, 'store'])->middleware('throttle:5,1')->name('leads.store');
 Route::get('/request-a-callback/thanks', [LeadController::class, 'thanks'])->name('leads.thanks');
+Route::get('/reserve', [ReservationController::class, 'create'])->name('reservations.create');
+Route::post('/reserve/estimate', [ReservationController::class, 'estimate'])->middleware('throttle:10,1')->name('reservations.estimate');
+Route::post('/reserve', [ReservationController::class, 'store'])->middleware('throttle:5,1')->name('reservations.store');
+Route::get('/reserve/thanks', [ReservationController::class, 'thanks'])->name('reservations.thanks');
 Route::view('/services', 'pages.services')->name('services');
 
 foreach (config('transportation.services', []) as $serviceKey => $service) {
@@ -32,6 +38,7 @@ Route::get('/sitemap.xml', function (): Response {
         'about' => resource_path('views/pages/about.blade.php'),
         'contact' => resource_path('views/pages/contact.blade.php'),
         'leads.create' => resource_path('views/leads/create.blade.php'),
+        'reservations.create' => resource_path('views/reservations/create.blade.php'),
         'privacy' => resource_path('views/pages/privacy.blade.php'),
         'terms' => resource_path('views/pages/terms.blade.php'),
     ];
@@ -65,4 +72,6 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function (): v
     Route::get('/leads/export', [AdminLeadController::class, 'export'])->name('leads.export');
     Route::get('/leads/{lead}', [AdminLeadController::class, 'show'])->name('leads.show');
     Route::patch('/leads/{lead}', [AdminLeadController::class, 'update'])->name('leads.update');
+    Route::get('/settings', [TransportationSettingController::class, 'edit'])->name('settings.edit');
+    Route::put('/settings', [TransportationSettingController::class, 'update'])->name('settings.update');
 });

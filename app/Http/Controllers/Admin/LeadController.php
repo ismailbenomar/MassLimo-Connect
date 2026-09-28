@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Lead;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
@@ -34,16 +35,16 @@ class LeadController extends Controller
         return view('admin.leads.show', compact('lead'));
     }
 
-    public function update(Request $request, Lead $lead): Response
+    public function update(Request $request, Lead $lead): RedirectResponse
     {
         Gate::authorize('update', $lead);
         $data = $request->validate([
-            'status' => ['required', 'in:new,contacted,qualified,invalid,closed'],
+            'status' => ['required', 'in:new,contacted,quoted,confirmed,qualified,invalid,closed'],
             'internal_notes' => ['nullable', 'string', 'max:5000'],
         ]);
         $lead->update($data);
 
-        return response()->noContent();
+        return to_route('admin.leads.show', $lead)->with('status', 'Request updated.');
     }
 
     public function export(Request $request): Response
@@ -51,10 +52,10 @@ class LeadController extends Controller
         Gate::authorize('viewAny', Lead::class);
         $status = $request->string('status')->toString();
         $leads = Lead::query()->when($status, fn ($query) => $query->where('status', $status))->latest()->get();
-        $rows = [['Name', 'Phone', 'Email', 'Service', 'Pickup', 'Destination', 'Status', 'Created']];
+        $rows = [['Request type', 'Name', 'Phone', 'Email', 'Service', 'Pickup', 'Destination', 'Distance (mi)', 'Time (min)', 'Estimate', 'Status', 'Created']];
 
         foreach ($leads as $lead) {
-            $rows[] = collect([$lead->full_name, $lead->phone, $lead->email, $lead->service_type, $lead->pickup_city, $lead->destination, $lead->status, $lead->created_at?->toIso8601String()])->map(fn ($value) => $this->safeCell($value))->all();
+            $rows[] = collect([$lead->request_type, $lead->full_name, $lead->phone, $lead->email, $lead->service_type, $lead->pickup_city, $lead->destination, $lead->estimated_distance_miles, $lead->estimated_duration_minutes, $lead->estimated_price, $lead->status, $lead->created_at?->toIso8601String()])->map(fn ($value) => $this->safeCell($value))->all();
         }
 
         $csv = collect($rows)->map(fn (array $row): string => collect($row)->map(fn ($value): string => '"'.str_replace('"', '""', (string) $value).'"')->implode(','))->implode("\r\n");

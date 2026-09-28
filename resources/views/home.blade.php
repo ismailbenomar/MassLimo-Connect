@@ -13,7 +13,7 @@
         <div class="hero-content shell">
             <h1>Massachusetts limo service referrals,<br><em>made easier.</em></h1>
             <p class="hero-intro">MassLimo Connect helps you start a conversation with an independent Massachusetts limo service provider for airport, business, wedding, hourly or group travel.</p>
-            <div class="hero-actions"><x-call-button location="hero" :show-number="true" /><a class="button button-light" href="{{ route('leads.create') }}">Request a callback <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" /></svg></a></div>
+            <div class="hero-actions"><a class="button button-gold" href="{{ route('reservations.create') }}">Reserve online <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" /></svg></a><a class="button button-light" href="{{ route('leads.create') }}">Request a callback <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" /></svg></a></div>
         </div>
         <div class="hero-index" aria-hidden="true"><span>BOS</span><span>MA</span></div>
         <p class="hero-credit">Illustrative vehicle photo: <a href="https://unsplash.com/photos/y3neNkE6efI" target="_blank" rel="noopener noreferrer">Martin Katler / Unsplash</a></p>
@@ -49,5 +49,5 @@
     <div class="coverage-board" aria-label="Popular areas"><div><span>BOS</span><strong>Boston</strong><small>City + airport</small></div><div><span>CAM</span><strong>Cambridge</strong><small>Greater Boston</small></div><div><span>SHR</span><strong>North + South Shore</strong><small>Coastal routes</small></div><div><span>CAP</span><strong>Cape Cod</strong><small>Regional travel</small></div></div>
 </section>
 
-<section class="home-close"><div class="shell"><h2>Where are you headed?</h2><p>Start with a call or tell us about your trip.</p><div class="hero-actions"><x-call-button location="final-cta" :show-number="true" /><a class="button button-light" href="{{ route('leads.create') }}">Request a callback</a></div></div></section>
+<section class="home-close"><div class="shell"><h2>Where are you headed?</h2><p>Estimate the route online or request a callback.</p><div class="hero-actions"><a class="button button-gold" href="{{ route('reservations.create') }}">Reserve online</a><a class="button button-light" href="{{ route('leads.create') }}">Request a callback</a></div></div></section>
 @endsection

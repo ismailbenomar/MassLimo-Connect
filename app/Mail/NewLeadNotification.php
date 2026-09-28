@@ -17,7 +17,9 @@ class NewLeadNotification extends Mailable
 
     public function envelope(): Envelope
     {
-        return new Envelope(subject: 'New MassLimo Connect callback request');
+        return new Envelope(subject: $this->lead->request_type === 'reservation'
+            ? 'New MassLimo Connect reservation request'
+            : 'New MassLimo Connect callback request');
     }
 
     public function content(): Content

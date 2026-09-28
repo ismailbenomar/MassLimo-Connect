@@ -50,6 +50,11 @@ return [
             'title' => 'Request a Transportation Callback | MassLimo Connect',
             'description' => 'Share your Massachusetts trip details and request a telephone conversation with an independent transportation provider.',
         ],
+        'reservations.create' => [
+            'label' => 'Reserve online',
+            'title' => 'Request a Transportation Reservation | MassLimo Connect',
+            'description' => 'Enter pickup and destination addresses to review estimated mileage and travel time, then request a reservation callback.',
+        ],
         'privacy' => [
             'label' => 'Privacy policy',
             'title' => 'Privacy Policy | MassLimo Connect',
@@ -63,6 +68,7 @@ return [
     ],
     'noindex_routes' => [
         'leads.thanks',
+        'reservations.thanks',
         'login',
         'admin.*',
     ],
